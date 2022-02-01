@@ -4,7 +4,7 @@ A Scuba diving quiz API.
 ## OUTCOME:
 - 100%: Make an API
 - 100%: Publish it on Rapid API
-    - <a src="https://rapidapi.com/mariza24/api/scuba-diving-quiz-version-101/" target="_blank">Link to the published API</a>  
+    - [Link to the published API](https://rapidapi.com/mariza24/api/scuba-diving-quiz-version-101/) 
 - 0%: make a React quiz app, and fetch data from it.
 
 
