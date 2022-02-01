@@ -18,12 +18,9 @@ A Scuba diving quiz API.
 - 
 
 ## How to run
-`yarn install`
-`yarn start`
-cd react-redux-todo-app/api
-npm install
-npm run server (will be on port 7000)
-- endpoint: localhost:7000/todos
+- `yarn install`
+- `yarn start` (will be on port 8000)
+- endpoint: `localhost:8000/trivia`
 
 
 ## IMAGE:
