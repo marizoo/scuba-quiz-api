@@ -1,21 +1,16 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const colors = require('colors');
-const cors = require('cors');
-const { json } = require('body-parser');
-const { nanoid } = require('nanoid');
+// define the port we want to open this server on & its dependencies
+const PORT = process.env.PORT || 8000;
+const express = require("express");
+const axios = require("axios");
 
-dotenv.config({ path: './config.env' });
 
+// initialize using express
 const app = express();
 
-app.use(cors());
-app.use(json());
-
 let trivia = [
-    refresher : [
+    refresher = [
 {
-    id: nanoid(),
+    id: 1001,
     questionText: "What is the most important rule of scuba diving?",
     answerOptions: [
         {answerText:"Never dive alone, always dive with a buddy", isCorrect: false},
@@ -25,7 +20,7 @@ let trivia = [
     ]
 },
 {
-    id: nanoid(),
+    id: 1002,
     questionText: "You should not dive if you have a cold or allergies because:",
     answerOptions: [
         {answerText:"You may become unconscious without warning", isCorrect: false},
@@ -35,7 +30,7 @@ let trivia = [
     ]
 },
 {
-    id: nanoid(),
+    id: 1003,
     questionText: "Holding your breath while scuba diving can:",
     answerOptions: [
         {answerText:"Lead to life threatening injuries", isCorrect: false},
@@ -45,7 +40,7 @@ let trivia = [
     ]
 },
 {
-    id: nanoid(),
+    id: 1004,
     questionText: "If your ears or sinuses hurt while you are descending, it usually means:",
     answerOptions: [
         {answerText:"You are feeling a squeeze and need to equalize", isCorrect: true},
@@ -55,7 +50,7 @@ let trivia = [
     ]
 },
 {
-    id: nanoid(),
+    id: 1005,
     questionText: "If you are your buddy were separated underwater, what would you generally do?",
     answerOptions: [
         {answerText:"Go up right away, wait a minute and then go back down underwater", isCorrect: false},
@@ -65,9 +60,9 @@ let trivia = [
     ]
 },
     ],
-    acronym : [
+    acronym = [
         {
-    id: nanoid(),
+    id: 2001,
     questionText: "A.G.E",
     answerOptions: [
         {answerText:"Auxiliary Ground Equipment", isCorrect: false},
@@ -78,7 +73,7 @@ let trivia = [
     ]
 },
         {
-    id: nanoid(),
+    id: 2002,
     questionText: "A.T.A",
     answerOptions: [
         {answerText:"Advanced Test Accelerator", isCorrect: false},
@@ -88,7 +83,7 @@ let trivia = [
     ]
 },
         {
-    id: nanoid(),
+    id: 2003,
     questionText: "C.C.R",
     answerOptions: [
         {answerText:"Closed Circuit Rebreather", isCorrect: true},
@@ -99,7 +94,7 @@ let trivia = [
     ]
 },
         {
-    id: nanoid(),
+    id: 2004,
     questionText: "C.E.S.A",
     answerOptions: [
         {answerText:"Controlle Environment Safety Assesment", isCorrect: false},
@@ -109,7 +104,7 @@ let trivia = [
     ]
 },
         {
-    id: nanoid(),
+    id: 2005,
     questionText: "D.P.V",
     answerOptions: [
         {answerText:"Differential Pressure Valve", isCorrect: false},
@@ -122,12 +117,16 @@ let trivia = [
 	
 ];
 
-app.get('/refresher', (req, res) => res.send(trivia.refresher));
-app.get('/acronym', (req, res) => res.send(trivia.acronym));
 
+// and now... the CRUD
+app.get("/", (req, res) => {
+  res.json("Welcome to my Scuba Diving Quiz API");
+});
 
+// get articles = create scraper tool
+app.get("/trivia", (req, res) => {
+  res.json(trivia);
+});
 
-
-const PORT = 7000;
-
-app.listen(PORT, console.log(`SERVER RUNNING ON ${PORT}`.green.bold));
+// get the port up and running
+app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT}`));
