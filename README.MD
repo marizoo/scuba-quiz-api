@@ -2,9 +2,9 @@
 A Scuba diving quiz API.
 
 ## OUTCOME:
-- Make an API
-- Publish it on Rapid API
-- make a React quiz app fetching data from it.
+- 100%: Make an API
+- 100%: Publish it on Rapid API
+- 0%: make a React quiz app, and fetch data from it.
 
 
 ## TECH STACKS:
@@ -37,4 +37,5 @@ A Scuba diving quiz API.
 
 ## IMAGE:
 ![Screenshot of the site](./screenshots/NODE-02.scuba-api-1200.jpg)
+![Screenshot of the site](./screenshots/NODE-02.scuba-api-rapid.jpg)
 
