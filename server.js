@@ -241,7 +241,7 @@ let trivia = [
 
 // Welcome page
 app.get("/", (req, res) => {
-  res.json("Welcome to my Scuba Diving Quiz API");
+  res.json("Welcome to my Scuba Diving Quiz API. Version 1.01.");
 });
 
 // get aall trivia

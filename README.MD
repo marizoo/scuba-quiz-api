@@ -8,21 +8,33 @@ A Scuba diving quiz API.
 
 
 ## TECH STACKS:
-- node
-- 
+- Javascript
+-  NPM Dependencies :
+    - "axios": "^0.21.4",
+    -  "express": "^4.17.1",
+    -  "nodemon": "^2.0.13"
 
 ## PROGRESS:
--
+### Version 1.01.
+    - Categories:
+        - refresher.
+        - acronym.
+        - emergency.
+    - Number of questions: 5.
+    - Type of answers: Multiple Choices.
 
-### Error Message(s):
-- 
 
 ## How to run
 - `yarn install`
 - `yarn start` (will be on port 8000)
-- endpoint: `localhost:8000/trivia`
+- Endpoints:
+    - Welcome: `localhost:8000/`
+    - All questions: `localhost:8000/trivia`
+    - category: refresher; `localhost:8000/trivia/refresher`
+    - category: acronym; `localhost:8000/trivia/acronym`
+    - category: emergency; `localhost:8000/trivia/emergency`
 
 
 ## IMAGE:
-![Screenshot of the site](./screenshots/xo0.jpg)
+![Screenshot of the site](./screenshots/NODE-02.scuba-api-1200.jpg)
 
