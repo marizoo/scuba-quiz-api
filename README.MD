@@ -2,10 +2,12 @@
 A Scuba diving quiz API.
 
 ## OUTCOME:
-- 100%: Make an API
-- 100%: Publish it on Rapid API
+In steps:
+01. Make an API with Node JS (this repo here).
+02. Publish it on Rapid API
     - [Link to the published API](https://rapidapi.com/mariza24/api/scuba-diving-quiz-version-101/) 
-- 0%: make a React quiz app, and fetch data from it.
+03. Make a React quiz app, and fetch data from it.
+    - [Link to the Quiz App](https://github.com/marizoo/react-scuba-quiz) 
 
 
 ## TECH STACKS:
